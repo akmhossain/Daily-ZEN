@@ -220,12 +220,7 @@ body {
     justify-content: center;
     align-items: flex-start;
     gap: 20px;
-}
-
-.quotes, #overlay {
-    width: 275px;
-}
-  
+}  
 
 .zenNews {
     border: 2px solid #4CAF50; 
