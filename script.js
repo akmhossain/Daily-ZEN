@@ -147,3 +147,32 @@ fetch(fetchURL)
 });
 
 
+// ZEN NEWS
+window.onload = fetchPositiveNews;
+const apiKey = 'e1407c605d2e45248bac3544aaa540b5';
+
+async function fetchPositiveNews() {
+  const url = `https://newsapi.org/v2/everything?q=good%20news%20OR%20uplifting%20OR%20inspiring&language=en&pageSize=1&sortBy=publishedAt&apiKey=${apiKey}`;
+
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
+
+    if (data.articles && data.articles.length > 0) {
+      const article = data.articles[0];
+      const newsText = document.getElementById("newsText");
+      newsText.innerHTML = `
+        <strong>${article.title}</strong>
+        <br>
+        ${article.description || "No description available."}<br>
+        <br>
+        <a href="${article.url}" target="_blank">Read more</a>
+      `;
+    } else {
+      document.getElementById("newsText").textContent = "No positive news found.";
+    }
+  } catch (error) {
+    console.error("Error fetching news:", error);
+    document.getElementById("newsText").textContent = "Error fetching news.";
+  }
+}

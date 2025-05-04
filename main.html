@@ -12,6 +12,7 @@
         <h1 style="color: green; font-size: 30px;">Daily ZEN</h1>
         <h3 style="color: forestgreen;">Start the day with zen</h3>
     </section>
+
     <section class="mainBody">
         <section class="mandala">
             <h3 id="drawTitle" style="color: forestgreen;">Zen Drawing</h3>
@@ -42,27 +43,41 @@
              </div>
          </section>
      
-        <section class = "quotes">
-         <h3 id="drawTitle" style="color: forestgreen;">Zen Quotes</h3>
-         <div class="quoteOutput">
-            <p id="quoteOutput">"Don't think about what you want to be, but what you want to do" - Richard P. Feynman</p>
-         </div>
-         <div class = "quoteRandom">
-             <input class="Btns" id="quoteBtn" type="Submit" value="Generate Another Quote">
-         </div>
+        <div class="rightColumn">
+            <div class="rightTop">
+                <section class = "quotes">
+                <h3 id="drawTitle" style="color: forestgreen;">Zen Quotes</h3>
+                <div class="quoteOutput">
+                    <p id="quoteOutput">"Don't think about what you want to be, but what you want to do" - Richard P. Feynman</p>
+                </div>
+                <div class = "quoteRandom">
+                    <input class="Btns" id="quoteBtn" type="Submit" value="Generate Another Quote">
+                </div>
 
-        </section>
+                </section>
 
-        <div id="overlay">
-            <input id="minInput" type="number" placeholder="Minutes">
-            <button class="overlayBtns" onclick="Start()">Start</button>
-            <button class="overlayBtns" onclick="exit()">Close</button>
-            <img id="breatheGIF" src="breatheGif.gif">
+                <div id="overlay">
+                    <input id="minInput" type="number" placeholder="Minutes">
+                    <button class="overlayBtns" onclick="Start()">Start</button>
+                    <button class="overlayBtns" onclick="exit()">Close</button>
+                    <img id="breatheGIF" src="breatheGif.gif">
+                </div>
+                <section id="breatheBorder" onclick="on()">
+                    <img id="breatheImage" src="breatheStatic.png">
+                </section>
+            </div>
+
+            <div class="rightBottom">
+                <section class="zenNews">
+                    <h3 style="color: forestgreen; text-align: center;">Zen News</h3>
+                    <div class="newsContent">
+                        <p id="newsText">Today’s mindful tip: Take five deep breaths before your next task.</p>
+                    </div>
+                </section>
+            </div>
+                </section>        
+            </section>
         </div>
-        <section id="breatheBorder" onclick="on()">
-            <img id="breatheImage" src="breatheStatic.png">
-        </section>
-    </section>
     
 </body>
 
