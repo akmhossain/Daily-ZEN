@@ -8,7 +8,8 @@
 
 <body>   
     <section class="title">
-        <h1 style="color: green;">Daily ZEN</h1>
+        <img id="logo" id="img1" src="lotusFlower.png">
+        <h1 style="color: green; font-size: 30px;">Daily ZEN</h1>
         <h3 style="color: forestgreen;">Start the day with zen</h3>
     </section>
     <section class="mainBody">
@@ -36,7 +37,7 @@
                  </div>
      
                  <div id = "clear">
-                     <button id="clear-btn">Clear</button>
+                     <button class="Btns" id="clear-btn">Clear</button>
                  </div>
              </div>
          </section>
@@ -47,9 +48,19 @@
             <p id="quoteOutput">"Don't think about what you want to be, but what you want to do" - Richard P. Feynman</p>
          </div>
          <div class = "quoteRandom">
-             <input id="quoteBtn" type="Submit" value="Generate Another Quote">
+             <input class="Btns" id="quoteBtn" type="Submit" value="Generate Another Quote">
          </div>
 
+        </section>
+
+        <div id="overlay">
+            <input id="minInput" type="number" placeholder="Minutes">
+            <button class="overlayBtns" onclick="Start()">Start</button>
+            <button class="overlayBtns" onclick="exit()">Close</button>
+            <img id="breatheGIF" src="breatheGif.gif">
+        </div>
+        <section id="breatheBorder" onclick="on()">
+            <img id="breatheImage" src="breatheStatic.png">
         </section>
     </section>
     
