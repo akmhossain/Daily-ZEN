@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>   
+    <section class="title">
+        <h1 style="color: green;">Daily ZEN</h1>
+        <h3 style="color: forestgreen;">Start the day with zen</h3>
+    </section>
+    <section class="mainBody">
+        <section class="mandala">
+            <h3 id="drawTitle" style="color: forestgreen;">Zen Drawing</h3>
+           
+            <div class="drawingPad">
+                 <canvas id="drawingPad" width="450" height="300"></canvas>
+            </div>
+     
+            <div id="toolbar">
+                 <div class = "stroke">
+                     <label>Color:</label>
+                     <input id="stroke" name="stroke" type="color" value="#228B22">
+                 </div>
+     
+                 <div id = "lineWidth">
+                     <label>Line Width:</label>
+                     <input id = "lineWidth" name="lineWidth" type="number" value="5">
+                 </div>
+     
+                 <div class = "lines">
+                     <label>Radial Symmetry:</label>
+                     <input id="lines" name="lines" type="number" value="6">
+                 </div>
+     
+                 <div id = "clear">
+                     <button id="clear-btn">Clear</button>
+                 </div>
+             </div>
+         </section>
+     
+        <section class = "quotes">
+         <h3 id="drawTitle" style="color: forestgreen;">Zen Quotes</h3>
+         <div class="quoteOutput">
+            <p id="quoteOutput">"Don't think about what you want to be, but what you want to do" - Richard P. Feynman</p>
+         </div>
+         <div class = "quoteRandom">
+             <input id="quoteBtn" type="Submit" value="Generate Another Quote">
+         </div>
+
+        </section>
+    </section>
+    
+</body>
+
+</html>
+
